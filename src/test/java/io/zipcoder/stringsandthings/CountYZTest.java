@@ -1,6 +1,8 @@
 package io.zipcoder.stringsandthings;
-
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 import io.zipcoder.StringsAndThings;
+import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
