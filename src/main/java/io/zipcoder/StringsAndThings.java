@@ -95,7 +95,20 @@ public class StringsAndThings {
      *            countTriple("xxxabyyyycd") // Should return 3
      *            countTriple("a") // Should return 0
      */
-    public Integer countTriple(String input){
-        return (input.contains());
+    public Integer countTriple(String input) {
+//find when string contains 3 of the same char in sequence
+        //input needs to be split into char's
+        // input repeated char's counted three+ times
+        if(input.length() <= 2) return 0;   //Less than three char's then just ignore that
+        if(input.charAt(0) == input.charAt(1) && input.charAt(0) == input.charAt(2))
+            //if char at first index is the same as the one after and the next one after
+            return 1 + countTriple(input.substring(1)); //count the above events (triples)
+
+        return countTriple(input.substring(1));
+
     }
 }
+
+
+
+
